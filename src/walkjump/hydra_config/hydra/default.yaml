@@ -1,0 +1,9 @@
+job:
+  chdir: true
+
+# output directory, generated dynamically on each run
+run:
+  dir: outputs/runs/${now:%Y-%m-%d}_${now:%H-%M-%S}
+sweep:
+  dir: outputs/multiruns/${now:%Y-%m-%d}_${now:%H-%M-%S}
+  subdir: ${hydra.job.num}

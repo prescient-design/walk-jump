@@ -1,0 +1,6 @@
+defaults:
+  - model_cfg/arch: bytenet
+  - model_cfg/hyperparameters: denoise_hp
+  - _self_
+
+_target_: walkjump.model.DenoiseModel

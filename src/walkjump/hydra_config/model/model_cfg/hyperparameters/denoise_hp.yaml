@@ -1,0 +1,5 @@
+defaults:
+  - default
+
+warmup_batches: 1
+lr_start_factor: 0.1

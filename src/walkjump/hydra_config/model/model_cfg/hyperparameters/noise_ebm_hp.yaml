@@ -1,0 +1,6 @@
+defaults:
+  - default
+
+batch_size: 64
+sigma: 1.0
+beta1: 0.9

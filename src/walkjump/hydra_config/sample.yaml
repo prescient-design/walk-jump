@@ -1,0 +1,26 @@
+defaults:
+    - _self_
+    - setup: default
+
+model:
+  _target_: walkjump.cmdline.utils.instantiate_model_for_sample_mode
+  model_type: denoise
+  checkpoint_path: ???
+  denoise_path: null
+
+langevin:
+  sigma: 1.0
+  delta: 0.5
+  lipschitz: 1.0
+  friction: 1.0
+  steps: 20
+  chunksize: 8
+
+designs:
+  output_csv: samples.csv
+  redesign_regions: null
+  seeds: denovo
+  num_samples: 100
+  limit_seeds: 10
+
+device: null

@@ -1,0 +1,9 @@
+_target_: walkjump.model.arch.ByteNetArch 
+n_tokens: 21
+d_model: 128
+n_layers: 35
+kernel_size: 3
+max_dilation: 128
+slim: true
+activation: silu
+final_layernorm: true

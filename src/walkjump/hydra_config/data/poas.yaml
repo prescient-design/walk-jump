@@ -1,0 +1,5 @@
+_target_: walkjump.data.AbDataModule
+
+csv_data_path: ???
+batch_size: 64
+num_workers: 1

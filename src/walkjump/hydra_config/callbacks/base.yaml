@@ -1,0 +1,14 @@
+defaults:
+  - model_checkpoint.yaml
+  - early_stopping.yaml
+  - lr_monitor.yaml
+  - _self_
+
+
+model_checkpoint:
+  dirpath: checkpoints 
+  filename: "{epoch}-{step}-{val_loss:.4f}"
+  monitor: val_loss
+
+early_stopping:
+  monitor: val_loss

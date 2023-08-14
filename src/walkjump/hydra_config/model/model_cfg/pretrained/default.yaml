@@ -1,0 +1,3 @@
+_target_: walkjump.model.DenoiseModel.load_from_checkpoint
+
+checkpoint_path: ???

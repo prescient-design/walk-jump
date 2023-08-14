@@ -1,0 +1,9 @@
+defaults:
+    - model_cfg/arch: lms
+    - model_cfg/hyperparameters: noise_ebm_hp
+    - model_cfg/pretrained: default
+    - model_cfg/sampler: default
+    - _self_
+
+
+_target_: walkjump.model.NoiseEnergyModel

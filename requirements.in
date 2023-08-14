@@ -1,0 +1,12 @@
+biopython
+edlib
+hydra-core >= 1.2.0
+jupyter
+ipykernel
+pandas
+pyarrow
+lightning==1.9.0
+pandas
+scikit-learn
+wandb
+python-dotenv

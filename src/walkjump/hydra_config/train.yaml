@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+  - data: poas.yaml
+  - model: denoise.yaml
+  - callbacks: default.yaml
+  - logger: wandb.yaml
+  - trainer: default.yaml
+  - setup: default.yaml
+
+dryrun: false

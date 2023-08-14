@@ -1,0 +1,8 @@
+_target_: walkjump.model.arch.LMSArch
+n_tokens: 21
+chain_len: 297  # combined hc & lc
+kernel_sizes: [15, 5, 3]
+hidden: 32
+friction: 1.0
+activation: 'relu'
+reg_l2_norm: 0.0
