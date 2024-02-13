@@ -1,0 +1,10 @@
+# python
+__pycache__
+*.py[cx]
+*.egg-info
+dist/
+build/
+.coverage*
+.mypy_cache/
+.pytest_cache/
+_skbuild
