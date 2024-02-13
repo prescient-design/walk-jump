@@ -7,7 +7,7 @@ import torch
 from torch import Tensor
 
 
-def conformity_score(log_prob: Tensor, val_log_prob: Tensor, **kwargs):
+def conformity_score(log_prob: Tensor, val_log_prob: Tensor) -> Tensor:
     """Returns the conformity test statistic.
 
     For each test likelihood value, compute the proportion of validation likelihoods
@@ -26,7 +26,7 @@ def conformity_score(log_prob: Tensor, val_log_prob: Tensor, **kwargs):
         The log probability of the validation data, shape (n_val)
     Returns
     -------
-    torch.Tensor
+    Tensor
         The conformity test statistic, shape (n, )
 
     """
