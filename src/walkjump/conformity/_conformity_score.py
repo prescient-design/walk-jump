@@ -1,8 +1,3 @@
-"""
-* [A Tutorial on Conformal Prediction](https://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf)
-* [Criteria of efficiency for conformal prediction](https://arxiv.org/pdf/1603.04416.pdf)
-"""
-
 import torch
 from torch import Tensor
 
@@ -16,6 +11,11 @@ def conformity_score(log_prob: Tensor, val_log_prob: Tensor) -> Tensor:
     - > 0.5: higher conformity, more similar to training data than validation data
     - 0.5: optimal conformity, as similar to training data as validation data 
     - < 0.5: lower conformity, validation is more similar to training data than test data
+
+
+    References
+    * [A Tutorial on Conformal Prediction](https://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf)
+    * [Criteria of efficiency for conformal prediction](https://arxiv.org/pdf/1603.04416.pdf)
 
 
     Parameters
