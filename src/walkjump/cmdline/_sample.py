@@ -4,7 +4,7 @@ import wandb
 from lightning.pytorch.utilities import rank_zero_only
 from omegaconf import DictConfig, OmegaConf
 
-from walkjump.cmdline.utils import instantiate_redesign_mask, instantiate_seeds
+from walkjump.cmdline.utils import instantiate_redesign_mask, instantiate_seeds, instantiate_model_for_sample_mode
 from walkjump.sampling import walkjump
 
 
@@ -28,7 +28,7 @@ def sample(cfg: DictConfig) -> bool:
     seeds = instantiate_seeds(cfg.designs)
 
     if not cfg.dryrun:
-        model = hydra.utils.instantiate(cfg.model).to(device)
+        model = instantiate_model_for_sample_mode(cfg.model).to(device)
         sample_df = walkjump(
             seeds,
             model,

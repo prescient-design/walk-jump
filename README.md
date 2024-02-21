@@ -10,11 +10,22 @@ Assuming you have [miniconda](https://docs.conda.io/en/latest/miniconda.html) in
 
 ### Training
 The entrypoint `train` is the main driver for training and accepts parameters using Hydra syntax.
-The available parameters for configuration can be found by running `train` --help or by looking in the `src/walkjump/hydra_config` directory
+The available parameters for configuration can be found by running `train` --help (```walkjump_train --help```) or by looking in the `src/walkjump/hydra_config` directory
 
 ### Sampling
 The entrypoint `sample` is the main driver for training and accepts parameters using Hydra syntax.
-The available parameters for configuration can be found by running `sample` --help or by looking in the `src/walkjump/hydra_config` directory
+The available parameters for configuration can be found by running `sample` --help (```walkjump_sample --help```) or by looking in the `src/walkjump/hydra_config` directory
+
+### Example
+```bash
+conda activate wj
+walkjump_train data.csv_data_path="data/poas.csv.gz"
+```
+then
+```bash
+walkjump_sample 'model.checkpoint_path="checkpoints/epoch=17-step=363937-val_loss=0.0040.ckpt"' designs.output_csv=my_samples.csv
+```
+(Extra quotation marks to handle "=" in file path)
 
 ## Contributing
 
