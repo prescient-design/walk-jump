@@ -8,12 +8,12 @@ model:
   denoise_path: null
 
 langevin:
-  sigma: 1.0
-  delta: 0.5
-  lipschitz: 1.0
-  friction: 1.0
-  steps: 20
-  chunksize: 8
+  sigma: 1.0 # Noise level
+  delta: 0.5 # Step size
+  lipschitz: 1.0 # Lipschitz constant, related to mass: u = pow(lipschitz, -1)
+  friction: 1.0 # (Gamma) Dampening term
+  steps: 20 # (K) Number of steps in chain
+  chunksize: 8 # Used for chunking the batch to save memory. Providing chunksize = N will force the sampling to occur in N batches.
 
 designs:
   output_csv: samples.csv
