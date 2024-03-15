@@ -1,0 +1,32 @@
+exclude: ".egg-info|_skbuild"
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+        exclude: mkdocs.yml|templates/.*.yaml|freesasa_py/ci.yml|hmmer_py/ci.yml
+      - id: check-yaml
+        name: check-yaml-unsafe
+        # --unsafe is a workaround for the use of !! in mkdocs.yml.
+        args: [--unsafe]
+        files: mkdocs.yml|freesasa_py/ci.yml|hmmer_py/ci.yml
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: debug-statements
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.6.0
+    hooks:
+      - id: nbstripout
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.2.2
+    hooks:
+    - id: ruff
+      files: |
+          (?x)(
+              ^walkjump/|
+          )
+    - id: ruff-format
+      files: |
+          (?x)(
+              ^walkjump/|
+          )
