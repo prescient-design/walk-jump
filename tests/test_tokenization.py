@@ -1,5 +1,6 @@
-from tests.fixtures import aho_alphabet_encoder, aho_sequence  # noqa: F401
 from walkjump.utils import token_string_from_tensor, token_string_to_tensor
+
+from tests.fixtures import aho_alphabet_encoder, aho_sequence  # noqa: F401
 
 
 def test_token_to_string_tofrom_tensor(aho_alphabet_encoder, aho_sequence):  # noqa: F811

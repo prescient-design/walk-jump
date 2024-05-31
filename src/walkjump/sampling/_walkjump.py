@@ -66,7 +66,6 @@ def walk(
     list_ys = []
 
     for seed_chunk in seed_tensor.chunk(chunksize):
-
         # note: apply_noise should control whether seed_chunk.requires_grad
         seed_chunk = model.apply_noise(seed_chunk)
         # seed_chunk.requires_grad = True

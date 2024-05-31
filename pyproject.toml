@@ -72,6 +72,9 @@ select = [
     "I",  # isort
     "B",  # flake8-bugbear
 ]
+exclude = [
+    "tests"
+]
 fixable = ["ALL"]
 unfixable = []
 

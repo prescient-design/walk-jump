@@ -6,7 +6,7 @@ defaults:
 
 
 model_checkpoint:
-  dirpath: checkpoints 
+  dirpath: checkpoints
   filename: "{epoch}-{step}-{val_loss:.4f}"
   monitor: val_loss
 

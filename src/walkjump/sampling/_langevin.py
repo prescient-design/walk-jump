@@ -18,7 +18,6 @@ def sachsetal(
     save_trajectory: bool = False,
     verbose: bool = True,
 ) -> tuple[torch.Tensor, torch.Tensor, list[torch.Tensor]]:
-
     options = _DEFAULT_SAMPLING_OPTIONS | sampling_options  # overwrite
 
     delta, gamma, lipschitz = options["delta"], options["friction"], options["lipschitz"]

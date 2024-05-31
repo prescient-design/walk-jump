@@ -9,7 +9,7 @@ def conformity_score(log_prob: Tensor, val_log_prob: Tensor) -> Tensor:
     that are less than or equal to it. Between 0 and 1, where:
 
     - > 0.5: higher conformity, more similar to training data than validation data
-    - 0.5: optimal conformity, as similar to training data as validation data 
+    - 0.5: optimal conformity, as similar to training data as validation data
     - < 0.5: lower conformity, validation is more similar to training data than test data
 
 

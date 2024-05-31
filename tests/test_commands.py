@@ -3,10 +3,10 @@ from typing import Callable
 import hydra
 import pytest
 from omegaconf import DictConfig, OmegaConf
-
-from tests.constants import CONFIG_PATH, TRAINER_OVERRIDES, SAMPLER_OVERRIDES
-from walkjump.cmdline import train, sample
+from walkjump.cmdline import sample, train
 from walkjump.cmdline.utils import instantiate_callbacks
+
+from tests.constants import CONFIG_PATH, SAMPLER_OVERRIDES, TRAINER_OVERRIDES
 
 COMMAND_TO_OVERRIDES = {"train": TRAINER_OVERRIDES, "sample": SAMPLER_OVERRIDES}
 

@@ -16,7 +16,6 @@ class AbBatch:
     def from_tensor_pylist(
         cls, inputs: list[torch.Tensor], vocab_size: int = len(TOKENS_AHO)
     ) -> "AbBatch":
-
         packed_batch = torch.stack(inputs, dim=0)
         return cls(packed_batch, vocab_size=vocab_size)
 

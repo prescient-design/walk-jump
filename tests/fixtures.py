@@ -1,7 +1,6 @@
 import pandas as pd
 import pytest
 from sklearn.preprocessing import LabelEncoder
-
 from walkjump.constants import TOKENS_AHO
 
 

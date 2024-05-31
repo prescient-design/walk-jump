@@ -9,5 +9,5 @@ SAMPLER_OVERRIDES = [
     "++designs.seeds=denovo",
     "++dryrun=true",
     "++designs.redesign_regions=[L1,L2,H1,H2]",
-    "++model.checkpoint_path=last.ckpt"
+    "++model.checkpoint_path=last.ckpt",
 ]
