@@ -1,6 +1,5 @@
 import torch
 from omegaconf import DictConfig
-
 from walkjump.constants import ALPHABET_AHO, TOKEN_GAP
 from walkjump.model import TrainableScoreModel
 from walkjump.sampling import stack_seed_sequences, walkjump

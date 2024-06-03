@@ -1,4 +1,4 @@
-_target_: walkjump.model.arch.ByteNetArch 
+_target_: walkjump.model.arch.ByteNetArch
 n_tokens: 21
 d_model: 128
 n_layers: 35

@@ -1,9 +1,9 @@
 import hydra
+from walkjump.constants import TOKENS_AHO
+from walkjump.data import AbDataset
 
 from tests.constants import CONFIG_PATH, TRAINER_OVERRIDES
 from tests.fixtures import aho_sequence, mock_ab_dataframe  # noqa: F401
-from walkjump.constants import TOKENS_AHO
-from walkjump.data import AbDataset
 
 
 def test_abdataset(mock_ab_dataframe):  # noqa: F811

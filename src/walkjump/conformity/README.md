@@ -18,8 +18,8 @@ To keep things simple, we simulate the features of a reference distribution usin
 import torch
 
 # Pick some reference distribution
-mu = torch.zeros(5) 
-covariance_matrix = torch.eye(5)  
+mu = torch.zeros(5)
+covariance_matrix = torch.eye(5)
 reference_distribution = torch.distributions.MultivariateNormal(mu, covariance_matrix)
 
 X_train = reference_distribution.sample((1000,))
@@ -80,14 +80,14 @@ plt.show()
 ```
 
 
-    
+
 ![png](../../../assets/conformity_example.png)
-    
+
 
 
 
 ```python
-# Mean conformity as a single statistic 
+# Mean conformity as a single statistic
 
 #    - > 0.5: higher conformity, more similar to training data than validation data
 #    - 0.5: optimal conformity, as on average, the test and validation data are equally likely under the reference distribution
@@ -103,4 +103,3 @@ print(f"Mean conformity for #2: {mean_conformity_test_2:.2f}")
 
     Mean conformity for #1: 0.53
     Mean conformity for #2: 0.19
-
